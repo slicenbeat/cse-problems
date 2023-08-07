@@ -6,7 +6,7 @@ export function findMedianOfNumber(numbers: number[]): number {
     // const sortedNumbers = numbers.sort((a, b) => a - b)
     const length = sortedNumbers.length;
     return length % 2 === 1
-        ? sortedNumbers[Math.ceil(length / 2)]
+        ? sortedNumbers[(length - 1) / 2]
         : (sortedNumbers[length / 2 - 1] + sortedNumbers[length / 2]) / 2
 }
 
