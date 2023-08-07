@@ -11,12 +11,17 @@ describe("problem 1: findSequenceShortStartPosition", () => {
         const index = findSequenceShortStartPosition(array);
         assert.strictEqual(index, 0);
     });
+    it("return correct start position when arr = [1, 1]", () => {
+        const array = [1, 1];
+        const index = findSequenceShortStartPosition(array);
+        assert.strictEqual(index, 0);
+    });
     it("return correct start position when arr = [1, 1, 1, 2, 2]", () => {
         const array = [1, 1, 1, 2, 2];
         const index = findSequenceShortStartPosition(array);
         assert.strictEqual(index, 3);
     });
-    it("return -1 when arr = []", ()=>{
+    it("return -1 when arr = []", () => {
         const array = [];
         const index = findSequenceShortStartPosition(array);
         assert.strictEqual(index, -1);
@@ -42,13 +47,7 @@ describe("problem 1: findSequenceShortStartPosition", () => {
         assert.strictEqual(index, 0);
     });
 
-    it("return -1 when arr = []", () => {
-        const array = [];
-        const index = findSequenceShortStartPosition(array);
-        assert.strictEqual(index, -1);
-    });
-    
-    it("return correct start position when arr = [1]", () => {
+    it("return -1 start position when arr = [1]", () => {
         const array = [1];
         const index = findSequenceShortStartPosition(array);
         assert.strictEqual(index, -1);
@@ -72,10 +71,10 @@ describe("problem 1: findSequenceShortStartPosition", () => {
         assert.strictEqual(index, -1);
     });
 
-    it("return correct start position when arr = [1, 1, 2, 2, 2, 1, 1, 1]", () => {
+    it("return 0 start position when arr = [1, 1, 2, 2, 2, 1, 1, 1]", () => {
         const array = [1, 1, 2, 2, 2, 1, 1, 1];
         const index = findSequenceShortStartPosition(array);
         assert.strictEqual(index, 0);
     });
-            
+
 })

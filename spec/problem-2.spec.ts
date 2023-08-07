@@ -1,6 +1,6 @@
 import * as assert from "assert";
 import { findArithmeticMeanOnLeftSide } from "../solution";
-import { TestCase } from ".";
+import { COMMON_TEST_CASES, TestCase } from ".";
 /**
  * Найти среднее арифметическое всех элементов слева от побочной 
  * и главной диагонали целочисленной квадратной матрицы
@@ -8,6 +8,7 @@ import { TestCase } from ".";
 describe("problem 2: findArithmeticMeanOnLeftSide", () => {
 
     const testCases: TestCase[] = [
+        ...COMMON_TEST_CASES,
         {
             matrix: [[1, 2, 3], [4, 5, 6], [7, 8, 9]],
             expectedMean: 4
