@@ -1,5 +1,3 @@
-
-
 export function findArithmeticMeanOfAllElementsOverSideAndMainDiagonalInclusive(matrix: number[][]): number {
     if (!matrix || matrix.length === 0 || matrix[0].length === 0) {
         return 0;
