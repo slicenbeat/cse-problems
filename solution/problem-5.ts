@@ -3,6 +3,13 @@ export function findSequenceLongStartPosition(array: number[]): number {
     let currentLength: number = 1;
     let index: number = -1;
     let currentIndex: number = 0;
+    if (!array || array.length === 0) {
+        return -1;
+    }
+
+    if (array.length === 1) {
+        return 0;
+    }
 
     for (let i = 1; i < array.length - 1; i++) {
         if (array[i] === array[i - 1]) {
