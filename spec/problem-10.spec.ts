@@ -8,11 +8,11 @@ import { COMMON_TEST_CASES, TestCase } from ".";
  */
 describe("problem 10: findArithmeticMeanOfAllElementsOverSideAndMainDiagonalInclusive", () => {
     const testCases: TestCase[] = [
+        ...COMMON_TEST_CASES,
         {
             matrix: [[1, 2, 3], [4, 5, 6], [7, 8, 9]],
             expectedMean: 3
         },
-        ...COMMON_TEST_CASES
 
     ]
     testCases.forEach((item, index) => {
