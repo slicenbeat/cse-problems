@@ -1,9 +1,13 @@
 export function findMedianOfNumber(numbers: number[]): number {
+    if (!Array.isArray(numbers) || numbers.length === 0) {
+        throw new Error('Invalid input. Please provide a non-empty array of numbers.');
+    }
     const sortedNumbers = quickSort(numbers);
+    // const sortedNumbers = numbers.sort((a, b) => a - b)
     const length = sortedNumbers.length;
     return length % 2 === 1
         ? sortedNumbers[Math.ceil(length / 2)]
-        : (sortedNumbers[Math.floor((length - 1) / 2)] + sortedNumbers[Math.ceil((length - 1) / 2)]) / 2
+        : (sortedNumbers[length / 2 - 1] + sortedNumbers[length / 2]) / 2
 }
 
 function quickSort(numbers: number[]): number[] {
@@ -19,5 +23,5 @@ function quickSort(numbers: number[]): number[] {
         numbers[i] < pivot ? less.push(numbers[i]) : greater.push(numbers[i]);
     }
 
-    return quickSort(less).concat([pivot], quickSort(greater));
+    return [...quickSort(less), pivot, ...quickSort(greater)];
 }
