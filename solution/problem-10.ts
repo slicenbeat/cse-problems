@@ -1,6 +1,10 @@
 
 
 export function findArithmeticMeanOfAllElementsOverSideAndMainDiagonalInclusive(matrix: number[][]): number {
+    if (!matrix || matrix.length === 0 || matrix[0].length === 0) {
+        return 0;
+    }
+
     const N = matrix.length;
     let sum = 0;
     let count = 0;
@@ -12,5 +16,5 @@ export function findArithmeticMeanOfAllElementsOverSideAndMainDiagonalInclusive(
             }
         }
     }
-    return Math.round(sum / count)
+    return count > 0 ? Math.round(sum / count) : 0;
 }
